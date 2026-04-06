@@ -36,9 +36,8 @@ jobs:
             fi
 
             status=$(curl -s -o /dev/null -w "%{http_code}" \
-              "${url}/rest/v1/" \
-              -H "apikey: ${anon_key}" \
-              -H "Authorization: Bearer ${anon_key}")
+              "${url}/auth/v1/health" \
+              -H "apikey: ${anon_key}")
 
             TOTAL=$((TOTAL + 1))
 
