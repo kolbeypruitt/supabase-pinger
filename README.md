@@ -42,11 +42,13 @@ The workflow runs automatically once daily at 08:00 UTC. You can also trigger it
 
 1. Add an entry to `config/projects.json`
 2. Add the corresponding secret in GitHub repo settings
+3. Add the secret to the `env` block in `.github/workflows/ping.yml`
 
 ## Removing a Project
 
 1. Remove the entry from `config/projects.json`
-2. Optionally remove the secret from GitHub repo settings
+2. Remove the secret from the `env` block in `.github/workflows/ping.yml`
+3. Optionally remove the secret from GitHub repo settings
 
 ## Monitoring
 

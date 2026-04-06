@@ -14,7 +14,8 @@ jobs:
 
       - name: Ping all projects
         env:
-          ALL_SECRETS: ${{ toJson(secrets) }}
+          SUPABASE_ANON_KEY_HYMNAL: ${{ secrets.SUPABASE_ANON_KEY_HYMNAL }}
+          SUPABASE_ANON_KEY_PROPWALK: ${{ secrets.SUPABASE_ANON_KEY_PROPWALK }}
         run: |
           FAILED=0
           TOTAL=0
@@ -24,7 +25,7 @@ jobs:
             url=$(echo "$project" | jq -r '.url')
             key_secret=$(echo "$project" | jq -r '.keySecret')
 
-            anon_key=$(echo "$ALL_SECRETS" | jq -r --arg key "$key_secret" '.[$key] // empty')
+            anon_key="${!key_secret}"
 
             if [ -z "$anon_key" ]; then
               echo "::error::[$name] Secret '$key_secret' not found in repo secrets"
