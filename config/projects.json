@@ -8,5 +8,10 @@
     "name": "PropWalk",
     "url": "https://reaqzebggudnjckhdltk.supabase.co",
     "keySecret": "SUPABASE_ANON_KEY_PROPWALK"
+  },
+  {
+    "name": "section8casa",
+    "url": "https://kdaafrwkhkomuzxniczh.supabase.co",
+    "keySecret": "SUPABASE_ANON_KEY_SECTION8CASA"
   }
 ]

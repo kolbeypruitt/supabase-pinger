@@ -16,6 +16,7 @@ jobs:
         env:
           SUPABASE_ANON_KEY_HYMNAL: ${{ secrets.SUPABASE_ANON_KEY_HYMNAL }}
           SUPABASE_ANON_KEY_PROPWALK: ${{ secrets.SUPABASE_ANON_KEY_PROPWALK }}
+          SUPABASE_ANON_KEY_SECTION8CASA: ${{ secrets.SUPABASE_ANON_KEY_SECTION8CASA }}
         run: |
           FAILED=0
           TOTAL=0
