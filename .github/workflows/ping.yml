@@ -29,6 +29,7 @@ jobs:
             anon_key="${!key_secret}"
 
             if [ -z "$anon_key" ]; then
+              echo "[$name] FAILED — Secret '$key_secret' not found in repo secrets"
               echo "::error::[$name] Secret '$key_secret' not found in repo secrets"
               FAILED=$((FAILED + 1))
               TOTAL=$((TOTAL + 1))
@@ -44,6 +45,7 @@ jobs:
             if [ "$status" -eq 200 ]; then
               echo "[$name] OK (HTTP $status)"
             else
+              echo "[$name] FAILED (HTTP $status)"
               echo "::error::[$name] FAILED (HTTP $status)"
               FAILED=$((FAILED + 1))
             fi
