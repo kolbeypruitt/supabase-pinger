@@ -1,0 +1,7 @@
+[
+  {
+    "name": "example-project",
+    "url": "https://your-project-ref.supabase.co",
+    "keySecret": "SUPABASE_ANON_KEY_EXAMPLE_PROJECT"
+  }
+]
